@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Quotes Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #008080;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #008080;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f5f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Get Your Positive Quote!</h1>
+    <button onclick="showQuote()">Show me a positive quote</button>
+
+    <script>
+        const quotes = [
+            "Believe in yourself and all that you are.",
+            "Your potential is endless.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "Happiness is not something ready-made. It comes from your own actions.",
+            "Start each day with a positive thought.",
+            "Do what you can, where you are, with what you have.",
+            "Take time to do what makes your soul happy.",
+            "Love more. Worry less.",
+            "Three grand essentials to happiness in this life are something to do, something to love, and something to hope for.",
+            "It’s your life. Be sure you’re playing to your strengths instead of simply to other people’s weaknesses.",
+            "Nothing can dim the light that shines from within.",
+            "You are capable of amazing things",
+            "You were born an original. Don’t be a copy.",
+            "Be yourself, everyone else is already taken.",
+            "The only way to do great work is to love what you do.",
+            "Believe you can, and you're halfway there.",
+            "Embrace the glorious mess that you are.",
+            "Positive anything is better than negative nothing.",
+            "Every day may not be good, but there’s something good in every day."
+        ];
+
+        let usedQuotes = [];
+
+        function showQuote() {
+            if (usedQuotes.length === quotes.length) {
+                // Reset used quotes when all have been shown
+                usedQuotes = [];
+            }
+
+            // Filter quotes not yet used
+            const availableQuotes = quotes.filter(quote => !usedQuotes.includes(quote));
+            const randomIndex = Math.floor(Math.random() * availableQuotes.length);
+            const quote = availableQuotes[randomIndex];
+
+            // Alert the quote and mark it as used
+            alert(quote);
+            usedQuotes.push(quote);
+        }
+    </script>
+
+</body>
+</html>

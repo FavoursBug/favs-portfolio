@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favour's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: inherit;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00adb5;
+        }
+        .section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #darkModeToggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background: none;
+            border: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+        #darkModeToggle:hover {
+            color: #00adb5;
+        }
+        .about-content {
+            text-align: center;
+        }
+        .about-content img {
+            max-width: 100%;
+            width: 300px;
+            margin-top: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .about-content img:hover {
+            transform: scale(1.05);
+        }
+        .resume-content, .contact-content {
+            text-align: center;
+        }
+        .resume-content a {
+            color: #00adb5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .resume-content a:hover {
+            color: #007b7a;
+        }
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+
+    <div class="container">
+        <!-- Header -->
+        <h1>Welcome to Favour's Portfolio</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('resume')">Resume</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+
+        <!-- About Section -->
+        <div id="about" class="section about-content active">
+            <h2>About Me</h2>
+            <p>Experienced and Certified Front-End Developer with a passion for creating responsive and visually engaging website designs that enhance user experience and functionality. Proficient in HTML5, CSS3, JavaScript, and Python, with extensive experience in developing robust web applications using Django. I excel at turning complex project requirements into high-performance, scalable solutions. My creativity and straightforward approach allow me to craft innovative designs, while my openness to collaboration helps me integrate diverse ideas to achieve optimal results. With a strong understanding of client service and a commitment to delivering exceptional user experiences, I am available to work on any web design or development project, ensuring value through effective design strategies and modern development practices.</p>
+            <img src="https://via.placeholder.com/300x200.png?text=Tech+Image" alt="Tech Image">
+        </div>
+
+        <!-- Resume Section -->
+        <div id="resume" class="section resume-content">
+            <h2>Resume</h2>
+            <p>Check out my full resume <a href="https://docs.google.com/document/d/1gmH22cJF_5mma2Hh5WpBLddbgfrPVs4l/edit?usp=sharing&ouid=111774432530622840228&rtpof=true&sd=true" target="_blank">here</a>.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section contact-content">
+            <h2>Contact</h2>
+            <p>I'd love to connect with you! You can reach me at:</p>
+            <p>Email: omiwolefavour44@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/favour-omiwole/" target="_blank">linkedin.com/in/favour-omiwole</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Favour Omiwole. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const toggleButton = document.getElementById('darkModeToggle');
+
+        // Show selected section
+        function showSection(id) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        // Dark mode toggle
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>

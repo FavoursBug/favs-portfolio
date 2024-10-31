@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang= "en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Favour's Portfolio</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+<!--
+
+Tooplate 2115 Marvel
+
+https://www.tooplate.com/view/2115-marvel
+
+-->
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Favour</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://docs.google.com/document/d/1gmH22cJF_5mma2Hh5WpBLddbgfrPVs4l/edit?usp=drive_link&ouid=111774432530622840228&rtpof=true&sd=true" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hello, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Favour</span>
+                                    <span class="animated-item">A Web Designer</span>
+                                    <span class="animated-item">A Photographer</span>
+                                </div>
+                        </h1>
+
+                        <p>Building a successful product is a rewarding challenge, and I bring high energy and dedication to user experience design, interface development, and web solutions.</p> 
+                        <div class="custom-btn-group mt-4">
+                          <a href="https://docs.google.com/document/d/1gmH22cJF_5mma2Hh5WpBLddbgfrPVs4l/edit?usp=sharing&ouid=111774432530622840228&rtpof=true&sd=true" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <!-- <a href="quote .html" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a> -->
+                          <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link" onclick="generateQuote(); return false;">Get a free quote</a>
+
+                          <script>
+                              const quotes = [
+                              "Believe in yourself and all that you are.",
+                              "Your potential is endless.",
+                              "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                              "Happiness is not something ready-made. It comes from your own actions.",
+                              "Start each day with a positive thought.",
+                              "Do what you can, where you are, with what you have.",
+                              "Take time to do what makes your soul happy.",
+                              "Love more. Worry less.",
+                              "Three grand essentials to happiness in this life are something to do, something to love, and something to hope for.",
+                              "It’s your life. Be sure you’re playing to your strengths instead of simply to other people’s weaknesses.",
+                              "Nothing can dim the light that shines from within.",
+                              "You are capable of amazing things",
+                              "You were born an original. Don’t be a copy.",
+                              "Be yourself, everyone else is already taken.",
+                              "The only way to do great work is to love what you do.",
+                              "Believe you can, and you're halfway there.",
+                              "Embrace the glorious mess that you are.",
+                              "Positive anything is better than negative nothing.",
+                              "Every day may not be good, but there’s something good in every day."
+                              ];
+                          
+                              let usedQuotes = [];
+                          
+                              function generateQuote() {
+                                  if (usedQuotes.length === quotes.length) {
+                                      // Reset used quotes when all have been shown
+                                      usedQuotes = [];
+                                  }
+                          
+                                  // Filter quotes not yet used
+                                  const availableQuotes = quotes.filter(quote => !usedQuotes.includes(quote));
+                                  const randomIndex = Math.floor(Math.random() * availableQuotes.length);
+                                  const quote = availableQuotes[randomIndex];
+                          
+                                  // Show the quote as an alert and mark it as used
+                                  alert(quote);
+                                  usedQuotes.push(quote);
+                              }
+                          </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h2>Things I have designed for digital media agencies</h2>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/Screenshot 2024-10-30 004310.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/firstimage.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/Screenshot 2024-10-30 003504.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/Screenshot 2024-10-30 004123.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2024</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Web Developer</span><small>Rehoboth Farmhouse INC.</small></h3>
+                                  <p>Design clean, modern, and aesthetically pleasing website layouts that reflect the farmhouse company's brand identity.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Project Manager</span><small>Rehoboth Farmhouse INC.</small></h3>
+                                <p> Assisted in the coordination of tasks and projects, ensuring all deadlines were met and deliverables were of high quality.</p>
+                            </div>
+                        </div>
+<!-- 
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2016</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>UI Freelancer</h3>
+                                <p>Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor quis pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            </div>
+                        </div> -->
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Junior Designer<small>IMT Concepts.</small></h3>
+                                <p>Collaborating with product team members to implement new feature development.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2024</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>BSc. Physiology</span><small>Olabisi Onabanjo University Nigeria</small></h3>
+                                  <p>Studied Human physiology from 2020 - 2024</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Aptech</span><small>Aptech Certified Web Developer Pro (ACWD Pro):</small></h3>
+                                <p> Dinstinction in <a rel="nofollow" href="https://www.aptechlearning.com/it/courses-aptech-certified-web-developer.aspx">Aptech</a> career program that teaches students how to develop and manage websites using programming languages like HTML5, JavaScript animated-info CSS</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2013</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Artwork Design</span><small>New Art School</small></h3>
+                                <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15854.706117789518!2d3.3804837!3d6.5624522!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8dfa732b8de9%3A0x6c514b5ebbc9101!2sLight%20Inc%20Advertising%20Agency!5e0!3m2!1sen!2sng!4v1730249986077!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">+2349019987985</p>
+                  <p><a href="mailto:hello@company.co">omiwolefavour44@gmail.com</a></p>
+                </div>
+
+                <ul class="social-links">
+                     <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
+                     <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                     <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <input type="submit" class="form-control submit-btn" value="Send ">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2024 Rehoboth Tech . All rights reserved</p>
+                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://docs.google.com/document/d/1gmH22cJF_5mma2Hh5WpBLddbgfrPVs4l/edit?usp=drive_link&ouid=111774432530622840228&rtpof=true&sd=true">Favour</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
